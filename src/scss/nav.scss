@@ -1,0 +1,122 @@
+@import "./variables";
+
+* {
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background: $navBgColor;
+    min-height: 8vh;
+    width: 100%;
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10vh;
+    background-position-x: 50;
+    background-position-y: 50;
+
+    .nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        list-style: none;
+        li {
+            color: $navPrimaryColor;
+            font-weight: bold;
+            &:hover {
+                background: $navLinkHoverBgColor;
+                transition: all 0.4s ease-in-out;
+                border-radius: 30%;
+            }
+        }
+
+        .nav-item {
+            &:focus,
+            &:hover,
+            &:visited,
+            &:link {
+                text-decoration: none;
+            }
+
+            &:active {
+                background: $navPrimaryColor;
+                color: $navBgColor;
+            }
+
+            @media screen and (max-width: 480px) {
+                display: none;
+            }
+        }
+    }
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    @media screen and (min-width: 480px) {
+        display: none;
+    }
+    @media screen and (max-width: 480px) {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        color: $navPrimaryColor;
+        text-decoration: none;
+    }
+
+    .icon-button {
+        width: 80px;
+        padding: 5px;
+        margin: 2px;
+        transition: filer 300ms;
+    }
+
+    .dropdown-parent {
+        position: absolute;     
+        width: 20%;
+        height: 1vh;
+        transform: translateX(-45%);
+        }
+
+    .dropdown-child {
+        height: 5vh;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        background-color: rgb(94, 140, 192);
+        border: 2px solid $navBgColor;
+        margin: auto;
+        font-size: 12px;
+        animation: growDown 300ms ease-in-out forwards;
+        @keyframes growDown {
+            0% {
+              transform: scaleY(0)
+            }
+            80% {
+              transform: scaleY(1.1)
+            }
+            100% {
+              transform: scaleY(1)
+            }
+          }
+    }
+}
+
+.mobile-main-menu {
+    display: flex;
+}

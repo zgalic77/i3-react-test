@@ -1,0 +1,22 @@
+{
+    "images": [
+        {
+            "id": 1,
+            "title": "Human",
+            "src": "../images/human.jpg",
+            "alt": "Human Image"
+        },
+        {
+            "id": 2,
+            "title": "Animal",
+            "src": "../images/animal.jpg",
+            "alt": "Animal Image"
+        },
+        {
+            "id": 3,
+            "title": "Car",
+            "src": "../images/car.jpg",
+            "alt": "Car Image"
+        }
+    ]
+}

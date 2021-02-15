@@ -1,0 +1,53 @@
+@import "./variables";
+
+* {
+  padding: 0;
+}
+.App {
+  text-align: center;
+  color: $galleryFigcaptionFgColor;
+}
+
+.outer-container {
+  display: flex;
+  flex: 1;
+
+  @media screen and (min-width: 480px) {
+    div {
+      flex: 1;
+      width: 32%;
+      background-color: $navBgColor;
+
+      figcaption {
+        color: rgb(37, 162, 211);
+        font-size: 2vw;
+        font-weight: bold;
+        color: $galleryFigcaptionFgColor;
+      }
+
+      figure img {
+        width: 100%;
+        padding: 2%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    div {
+      width:100%;
+      background-color: $navBgColor;
+
+      figcaption {
+        font-size: 5vw;
+        font-weight: bold;
+      }
+
+      figure img {
+        width:90%;
+      }
+    }
+    display: flex;
+    flex-flow: column wrap;
+    flex-grow: 1;
+  }
+}
